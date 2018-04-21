@@ -6,21 +6,16 @@
 
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
            <style type="text/css">
-
-
            a:link{
-
            	      color: green;
            	      text-decoration: none;   /* four state of link */
                  }
            
            a:visited{
-                      color: maroon;
-
+                      color: grey;
                     }  
           
            a:hover{
-
            	      background-color: red;
            	      color:white;
            	      text-decoration: underline;  /* optional */
@@ -29,11 +24,10 @@
            a:active{
            	       background: green; /* when clicked colour changes of the link */
                    }                  
-
            body
                 {
-                	color: black;
-                    background: silver;
+                	color: white;
+                    background: black;
                     background-image: url(photo.jpg);
                     background-repeat: no-repeat;
                     background-position: 55% 130px;
@@ -43,79 +37,39 @@
                    font-family: arial;
                    color: yellow;
                 }	
-             h1
-                {
-                	font-weight: bold;
-                	font-family: arial;
-                	text-align: center;
-                	background-color: silver;
-                	padding-left: 00px;
-                	padding-right: 00px;
-                	border: 5px solid black;
-
-                }  
+             
               p
                 {
-                    font-family: arial;
-                    font-size:150%;
-                    background-color: orange;
-                    align-items: center; 
-                    margin: 20px; 
-                    padding: 30px;  
-                    text-indent: 30px;
-                    left: 0;
-                    line-height: 100px;
-                    margin: auto;
-                    margin-top: -100px;
-                    position: absolute;
-                    top: 50%;
-                    width: 100%; 
-
-                }  
-
-          table {
-                   background: white;
-                   border: 3px solid green; /* order must be maintained */
-                   margin: 50px;
                    font-family: arial;
-                   font-size: 150%;
-                   text-align: center;
-                   padding-right: 00px;
+                   font-size:100%;
+                   background-color: black; 
+                   width: 390px;     /* fix width of paragraph */
+                  margin: px;    /*make space all around paragraph */
+                   padding: 10px;  /*to make distance of text from border*/
+                   text-indent: 0px;   /*to move paragraph first line */
 
                 }  
-
-             tr {
-                   background: pink;
-
-                }  
-
-             td {
-                 border: 2px solid red;
-
-                }   
-             th {
-                  background: green;
-                
-                } 
            </style>
  
            <title> technothlon </title>
 </head>
 
 <body >
-
-	<script type="text/javascript">
-		function sid() {
-			alert("Welcome to Technothlon!!!!");
-		}
-		
-		
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 
-  <div id="ding"><img src="te.png" height="50" align="center" /></div>
-		<p align="center">CLICK ON ME</p>
+  <div class="ding"><img src="te.png" height="50" align="center" /></div>
+  <hr>
+ <div style="position:absolute;left:300;top:500"> <img src="mys.jpg" height="500" align="center"  > </div>
+	<div style="position:absolute;left:900;top:500">
+    <p> It is one of the MYSTERIOUS ISLAND and as we all know that mysterious things are curious . We are always in search of key to solve mystery . Please find the key to inspire others... </p>
+  </div>
+  <div class="key" style="position:absolute;left:300;top:500">
+    <B>
+      <a href="http://technothlon.techniche.org/"> K E Y </a> 
+    </B>
+  </div>
 <script>
-
+  $(".key").hide();
 $( document ).ready(function() {
  
     alert("Welcome to our 1st Level");
@@ -125,22 +79,14 @@ $( document ).ready(function() {
   
   $( document ).ready(function() {
  
-    $( "img" ).click(function( event ) {
+    $( ".ding" ).click(function( event ) {
  
-        alert("CONGRATS!!! You Just Understood the Level");
-
+      $(".key").fadeIn(1000);
     });
 });
+  
 
-  $( document ).ready(function() {
- 
-    $( "img" ).mouseleave(function( event ) {
- 
-        $( "img" ).fadeOut( 1000 );
-
- 
-    });
-});
+  
 </script>
 </body>
 </html>
